@@ -44,6 +44,7 @@ public final class AppServlet extends HttpServlet {
       + "<h3>'name'</h3>\n<h3>'bus'</h3>\n<h3>'sports'</h3>\n<h3>'sci'</h3>\n<h3>'world'</h3>";
 
   private String destination = "newsDisplay.jsp";
+  private static final String CONTENT_TYPE_TEXT_HTML = "text/html";
 
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -57,7 +58,7 @@ public final class AppServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest req, HttpServletResponse resp)
           throws ServletException, IOException {
-    resp.setContentType("text/html");
+    resp.setContentType(CONTENT_TYPE_TEXT_HTML);
     try (PrintWriter out = resp.getWriter()) {
       out.println(msgPartOne + " Post " + msgPartTwo);
     }
@@ -67,7 +68,7 @@ public final class AppServlet extends HttpServlet {
   @Override
   public void doDelete(HttpServletRequest req, HttpServletResponse resp)
           throws ServletException, IOException {
-    resp.setContentType("text/html");
+    resp.setContentType(CONTENT_TYPE_TEXT_HTML);
     try (PrintWriter out = resp.getWriter()) {
       out.println(msgPartOne + " Delete " + msgPartTwo);
     }
@@ -76,7 +77,7 @@ public final class AppServlet extends HttpServlet {
   @Override
   public void doPut(HttpServletRequest req, HttpServletResponse resp)
           throws ServletException, IOException {
-    resp.setContentType("text/html");
+    resp.setContentType(CONTENT_TYPE_TEXT_HTML);
     try (PrintWriter out = resp.getWriter()) {
       out.println(msgPartOne + " Put " + msgPartTwo);
     }
