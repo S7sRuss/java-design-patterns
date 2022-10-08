@@ -45,10 +45,6 @@ public final class AppServlet extends HttpServlet {
 
   private String destination = "newsDisplay.jsp";
 
-  public AppServlet() {
-
-  }
-
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp)
           throws ServletException, IOException {
